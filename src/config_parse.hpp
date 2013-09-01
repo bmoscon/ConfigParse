@@ -45,6 +45,9 @@
  *
  */
 
+#ifndef __CONFIG_PARSE__
+#define __CONFIG_PARSE__
+
 #include <string>
 #include <unordered_map>
 #include <exception>
@@ -87,3 +90,5 @@ public:
   
   std::string msg;
 };
+
+#endif
