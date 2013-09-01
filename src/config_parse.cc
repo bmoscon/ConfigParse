@@ -103,7 +103,7 @@ string ConfigParse::getValue(const string &section, const string &name)
       return (section_it->second);
     }
   } else {
-    throw ConfigParseEx("Section does not exist");
+    return (string());
   }
   
 }
