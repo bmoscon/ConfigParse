@@ -5,7 +5,7 @@
  * Config Parse Method Definitions
  *
  *
- * Copyright (C) 2013  Bryant Moscon - bmoscon@gmail.com
+ * Copyright (C) 2013-2014  Bryant Moscon - bmoscon@gmail.com
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to 
@@ -71,7 +71,7 @@ ConfigParse::iterator ConfigParse::begin(const string &section)
   if (it != config.end()) {
     return (it->second.begin());
   } else {
-    throw ConfigParseEx("Section does not exist");
+    throw ConfigParseEx("Section \"" + section + "\" does not exist");
   }
 }
 
@@ -83,7 +83,7 @@ ConfigParse::iterator ConfigParse::end(const string &section)
   if (it != config.end()) {
     return (it->second.end());
   } else {
-    throw ConfigParseEx("Section does not exist");
+    throw ConfigParseEx("Section \"" + section + "\" does not exist");
   }
 }
 
