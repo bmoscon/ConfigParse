@@ -5,7 +5,7 @@ Example usage:
 
 ConfigParse cp("config.ini");
 
-std::string value = cp.getValue("Section Name", "Name");
+std::string value = cp.get_value("Section Name", "Name");
 
 or, iterate over name-value pairs in a section:
 
