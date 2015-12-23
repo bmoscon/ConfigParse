@@ -10,13 +10,13 @@ int main()
   ConfigParse cp("test.ini");
   
   // test section count
-  vector<string> sections = cp.getSections();
+  vector<string> sections = cp.get_sections();
   assert(sections.size() == 3);
-  assert(cp.getValue("section 1", "name1") == "value1");
-  assert(cp.getValue("section 2", "does not exist") == "");
-  assert(cp.getValue("section 3", "name5") == "value5");
-  assert(cp.getValue("section 3", "does not exist") == "");
-  assert(cp.getValue("does not exist", "name") == "");
+  assert(cp.get_value("section 1", "name1") == "value1");
+  assert(cp.get_value("section 2", "does not exist") == "");
+  assert(cp.get_value("section 3", "name5") == "value5");
+  assert(cp.get_value("section 3", "does not exist") == "");
+  assert(cp.get_value("does not exist", "name") == "");
 
   assert(cp.begin("section 2") == cp.end("section 2"));
   
