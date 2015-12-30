@@ -20,4 +20,4 @@ while (it != cp.end(SectionName)) {
 }
 ```
 
-for complete list of methods/types, see config_parse.hpp
+for complete list of methods/types, see [config_parse.hpp](src/config_parse.hpp)
